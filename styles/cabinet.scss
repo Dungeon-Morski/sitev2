@@ -1,0 +1,82 @@
+//
+//  Meal page
+//
+
+
+.personal-body {
+    background-color: rgba(252, 250, 248, 1);
+}
+
+/*=== header ===*/
+.header__menu.js-desktop {
+    .ring-button {
+        margin-right: 15px;
+    }
+    .avatar-nickname {
+        margin-right: 15px;
+    }
+}
+/*=== /header ===*/
+
+
+/*=== section-cabinet ===*/
+.cabinet {
+    .container {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.cabinet__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 955px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h1 {
+        margin-bottom: 70px;
+        font-size: 7vh;
+        font-weight: 900;
+        color: transparent;    
+        background-clip: text;
+        background-image: linear-gradient(to right, rgba(9, 83, 228, 1), rgba(7, 218, 253, 1));
+        text-transform: uppercase;
+    }
+    p {
+        margin-bottom: 65px;
+        font-size: 4vh;
+        font-weight: 500;
+        & + p {
+            font-size: 2.5vh;
+        }
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 16px 70px;
+        border-radius: 50px;
+        background: linear-gradient(to right, rgba(9, 83, 228, 1), rgba(7, 218, 253, 1));;
+        color: white;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 150%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(-50%) skewX(-45deg);
+        }
+        &:hover::before {
+            left: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+/*=== /section-cabinet ===*/
+
+//
+//  End of
+//  Cabinet page
+//

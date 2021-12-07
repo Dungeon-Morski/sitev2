@@ -1,0 +1,217 @@
+//
+//  Meal page
+//
+
+/*=== section-meal-health ===*/
+.meal-health {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .health__text {
+        padding: 15px 0px;
+        max-width: 700px;
+        h2 {
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+        p {
+            margin-top: 20px;
+            line-height: 32px;
+            color: rgba(107, 114, 129, 1);
+        }
+        a {
+            display: inline-flex;
+            position: relative;
+            align-items: center;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border: 1px solid black;
+            &::after {
+                content: url("../images/arrow.svg");
+                position: absolute;
+                margin-left: 50%;
+                transform: translateY(2px);
+                opacity: 0;
+            }
+            &:hover {
+                border-color: white;
+                border-left: 1px solid black;
+                &::after {
+                    opacity: 1; 
+                } 
+            }
+
+        }
+    }
+}
+/*=== /section-meal-health ===*/
+
+
+/*=== section-vk-group ===*/
+.vk-group {
+    .container{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.vk-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    width: 100%;
+    padding: 30px;
+    border: 1px solid black;
+    
+    .vk-group-left-side {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        p {
+            text-transform: uppercase;
+            line-height: 32px;
+            font-size: 21px;
+        }
+    }
+
+    a {
+        display: inline-flex;
+        position: relative;
+        align-items: center;
+        padding: 10px 30px;
+        margin-top: 20px;
+        border: 1px solid black;
+        &::after {
+            content: url("../images/arrow.svg");
+            position: absolute;
+            margin-left: 85px;
+            transform: translateY(2px);
+            opacity: 0;
+        }
+        &:hover {
+            border-color: white;
+            border-left: 1px solid black;
+            &::after {
+                opacity: 1; 
+            } 
+        }
+
+    }
+}
+
+.vk-icon-title {
+    display: flex;
+    align-items:center;
+    height: 40px;
+
+    span {
+        font-weight: bold;
+        font-size: 32px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+}
+.vk-group__text {
+    position: relative;
+    line-height: 32px;
+    color: rgba(107, 114, 129, 1); 
+    margin-top: 40px;
+    &::before {
+        content: '';
+        width: 115px;
+        height: 2px;
+        position: absolute;
+        border: 1px solid black;
+        top: -30px;
+    }
+}
+/*=== /section-vk-group ===*/
+
+
+/*=== section-meal-tips ===*/
+.meal-tips-cards {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .card__text {
+        padding: 15px 0px;
+        max-width: 700px;
+        h2 {
+            margin-top: 20px;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+        p {
+            margin-top: 20px;
+            height: 225px;
+            color: rgba(107, 114, 129, 1);
+            line-height: 32px;
+            text-overflow: ellipsis;
+            box-orient: vertical;
+            -webkit-box-orient: vertical;
+            line-clamp: 7;
+            -webkit-line-clamp: 7;
+            overflow: hidden;
+            display: -webkit-box;
+        }
+        a {
+            display: inline-flex;
+            position: relative;
+            align-items: center;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border: 1px solid black;
+            &::after {
+                content: url("../images/arrow.svg");
+                position: absolute;
+                margin-left: 50%;
+                transform: translateY(2px);
+                opacity: 0;
+            }
+            &:hover {
+                border-color: white;
+                border-left: 1px solid black;
+                &::after {
+                    opacity: 1; 
+                } 
+            }
+        }
+    }
+}
+/*=== /section-meal-tips ===*/
+
+@media screen and (max-width: 830px) {
+    .health__img + .health__text,
+    .health__text + .health__img {
+        order: -1;
+    }
+    .meal-health .container,
+    .vk-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .vk-group__text {
+        order: -1;
+    }
+}
+@media screen and (max-width: 650px) {
+    .meal-tips-cards .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+//
+//  End of
+//  Meal page
+//

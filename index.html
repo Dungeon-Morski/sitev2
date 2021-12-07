@@ -5,7 +5,6 @@
 		<!-- meta -->
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; child-src 'none';">
 		
 		<meta name="robots" content="index, follow">
 		<meta name="description" content="">
@@ -20,98 +19,118 @@
 
 		<!-- links -->
 		<link rel="stylesheet" href="styles/normalize.css">
-		<link rel="stylesheet" href="styles/styles.css">
-		<link rel="stylesheet" href="styles/media.css">
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/home.css">
 		<!-- /links -->
 
 	</head>
 	<body>
-		<!-- wrapper-page -->
-		<section class="wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="container">
 
-			<!-- header -->
-			<header class="header">
-				<div class="container">
-					<div class="header__left"> 
+				<!-- logotype -->
+				<a href="index.html" class="header__logotype">
+					<img src="images/logo.svg" alt="logotype" height="43px"/>
+					<span>ZOJE</span>
+				</a>
+				<!-- /logotype -->
 
-						<!-- logotype -->
-						<a href="#!" class="logotype">
-							<img src="images/logo.svg" alt="logotype" />
-							<span>ZOJE</span>
-						</a>
-						<!-- /logotype -->
+				<!-- header__menu -->
+				<div class="header__menu js-desktop">
 
-						<!-- navigation -->
-						<nav class="header__nav">
-							<ul class="menu">
-								<li><a href="#!">Советы</a></li>
-								<li><a href="meal.html">Питание</a></li>
-								<li><a href="beauty.html">Красота</a></li>
-								<li><a href="#!">Спорт</a></li>
-							</ul>
-						</nav>
-						<!-- /navigation -->
+					<!-- navigation -->
+					<nav class="header__navigation">
+						<ul class="menu-list">
+							<li><a href="#!">Советы</a></li>
+							<li><a href="meal.html">Питание</a></li>
+							<li><a href="beauty.html">Красота</a></li>
+							<li><a href="sport.html">Спорт</a></li>
+						</ul>
+					</nav>
+					<!-- /navigation -->
 
+					<!-- premium-button -->
+					<div class="premium-button">
+						<a href="cabinet.html">Premium</a>
 					</div>
-					<div class="header__right">
+					<!-- /premium-button -->
 
-						<!-- personal__account -->
-						<div class="personal__account">
-							<a href="#!">Личный кабинет</a>
-
-						</div>
-						<!-- /personal__account -->
-
-						<!-- menu__button -->
-						<div class="menu__button display_none">
-							<span></span>
-						</div>
-						<!-- /menu__button -->
-
+					<!-- account-button -->
+					<div class="account-button">
+						<a href="#!">Личный кабинет</a>
 					</div>
+					<!-- /account-button -->
 
 				</div>
-			</header>
+				<!-- /header__menu -->
 
-			<!-- /header -->
+				<!-- menu-button -->
+				<div class="menu-button js-hidden">
+					<span></span>
+				</div>
+				<!-- /menu-button -->
+				
+			</div>
+		</header>
+		<!-- /header -->
 
-			<!--Popup-->
+		<!-- modal_block -->
+		<div class="modal-wrapper js-hidden">
+			<div class="modal">
 
-			<!-- <div class="popup_bg">
-                <div class="popup">
-					<div class="popup__content">
+				<div class="modal__exit-button">
+					<span></span>
+				</div>
 
-						<div class="popup__position">
-						<a href="#">Регистрация</a>
-							<span class="arr">></span>
-							<a href="#">Введите код подтверждение </a>
-						</div>
-						
-						<div class="popup__form">
-							<form action="">
-								<label for="">Логин *</label>
-								<input type="text" name="" id="" placeholder="Иван">
-
-								<label for="">Email *</label>
-								<input type="email" name="" id="" placeholder="@myemail">
-
-								<label for="">Пароль *</label>
-								<input type="password" name="" id="" placeholder="qwerty123">
-							</form>
-							123
-						</div>
+				<div class="modal__position">
+					<a href="#">Регистрация</a>
+					<span>></span>
+					<a href="#">Введите код подтверждение </a>
+				</div>
+				
+				<form action="" class="modal__form">
+					<div class="input-group">
+						<label for="">Логин *</label>
+						<input type="text" name="" id="" required='required' placeholder="Иван" >
 					</div>
-                </div>
-            </div> -->
+					<div class="input-group">
+						<label for="">Email *</label>
+						<input type="email" name="" id="" placeholder="@myemail" required="">
+					</div>
+					<div class="input-group">
+						<label for="">Пароль *</label>
+						<input type="password" name="" id="" placeholder="qwerty123" required='required'>
+					</div>
+				</form>
 
+				<div class="confirm">
+					<input type="checkbox" name="" id="confirm" required='required'>
+					<div class="label-block">
+						<label for="confirm">
+							Я соглашаюсь всеми правилами сайта и использование его.
+						</label>
+						<p>Нажмите на квадрат, если вы согласны.</p>
+					</div>
+				</div>
 
-			<!--/Popup-->
+				<input type="submit" class="submit-button">
 
-			<!-- wrapper__content -->
-			<div class="wrapper__main">
+				<div class="auntification">
+					<a href="#">Я уже зарегистрирован </a>
+				</div>
+			</div>
+		</div>
+		<!-- /modal_block -->
+
+		<!-- main -->
+		<main class="main">
+
+			<!-- home -->
+			<section class="home">
 				<div class="container ">
 
-					<div class="wrapper__text">
+					<div class="home__text">
 						<h1>
 							Здоровый образ
 							жизни - <span>это образ
@@ -124,22 +143,16 @@
 						<a href="#!">Узнать больше</a>
 
 					</div>
-					<div class="wrapper__image">
-						<img src="images/wrapper-image.png" alt="happy-woman" width="600px" />
+
+					<div class="home__image">
+						<img src="images/home/wrapper-image.png" alt="happy-woman" />
 					</div>
 
-				</div>
-			</div>
-			<!-- /wrapper__content -->
-			            
-		</section>
-		<!-- /wrapper-page -->
+				</div>		            
+			</section>
+			<!-- /home -->
 
-
-		<!-- main -->
-		<main class="main">
-
-			<!-- section_tips -->
+			<!-- tips -->
 			<section class="tips">
 				<div class="container">
 
@@ -172,44 +185,152 @@
 
 				</div>
 			</section>
-			<!-- /section_tips -->
+			<!-- /tips -->
 
-			
-			<!-- section_slider -->
+			<!-- slider -->
 			<section class="slider">
 				<div class="container">
 
-				
+					<div class="slider-container">
+
+						<div class="slides">
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="">
+										Читать
+									</a>
+								</div>
+							</div>
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="#!">
+										Читать
+									</a>
+								</div>
+							</div>
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="">
+										Читать
+									</a>
+								</div>
+							</div>
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="">
+										Читать
+									</a>
+								</div>
+							</div>
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="">
+										Читать
+									</a>
+								</div>
+							</div>
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="">
+										Читать
+									</a>
+								</div>
+							</div>
+							<div class="slide-wrapper">
+								<div class="slide">
+									<img src="images/home/gray rectangle.png" alt="" />
+									<p>
+										Как начать вести здоровый образ жизни
+									</p>	
+									<a href="">
+										Читать
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-buttons">
+							<span class="js-button_disabled"></span>
+							<ul class="slides-buttons"></ul>
+							<span></span>
+						</div>
+
+					</div>
+
 				</div>
 			</section>
-			<!-- /section_slider -->
+			<!-- /slider -->
 
-
-			<!-- section_banner -->
+			<!-- banner -->
 			<section class="banner">
 				<div class="container">
-
-				
+					<img src="images/home/banner1.png" alt="" />
+					<img src="images/home/banner2.png" alt="" />
 				</div>
 			</section>
-			<!-- /section_banner -->
+			<!-- /banner -->
 
 		</main>
 		<!-- /main -->
-
 
 		<!-- footer -->
 		<footer class="footer">
 			<div class="container">
 
+				<div class="footer__left">
+
+					<!-- logotype -->
+					<a href="index.html"" class="footer__logotype">
+						<img src="images/logo.svg" alt="logotype" />
+						<span>ZOJE</span>
+					</a>
+					<!-- /logotype -->
+
+					<p>
+						Стиль жизни, направленный на омоложение и оздоровление 
+						всего организма, отказ от вредных привычек.
+					</p>
+				</div>
+
+				<div class="footer__right">
+					<a href="#!"><img src="images/footer/Twitter-Original.png" alt="Twitter" /></a>
+					<a href="#!"><img src="images/footer/YouTube-Original.png" alt="YouTube" /></a>
+					<a href="#!"><img src="images/footer/VK-Original.png" alt="VK" /></a>
+					<a href="#!"><img src="images/footer/Instagram-Original.png" alt="Instagram" /></a>
+				</div>
+
 			</div>
 		</footer>
 		<!-- /footer -->
 
-
 		<!-- scripts -->
 		<noscript>Your browser don't allow scripts></noscript>
 		<script src="js/script.js"></script>
+		<script src="js/home.js"></script>
 		<!-- /scripts -->
 
 	</body>

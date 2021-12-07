@@ -1,0 +1,234 @@
+/*=== section-home ===*/
+.home .container {
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 84px);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.home__text h1 {
+  margin-bottom: 28px;
+  max-width: 507px;
+  font-size: 6vh;
+}
+.home__text span {
+  font-weight: normal;
+}
+.home__text p {
+  max-width: 465px;
+  margin-bottom: 71px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.57);
+}
+.home__text a {
+  position: relative;
+  display: inline-block;
+  padding: 16px 55px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+}
+.home__text a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%) skewX(-45deg);
+}
+.home__text a:hover::before {
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%) skewX(-45deg);
+}
+
+.home__image {
+  overflow-x: hidden;
+  max-width: 700px;
+  height: auto;
+}
+.home__image img {
+  position: relative;
+  right: -100px;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1025px) {
+  .home .container {
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .home .home__text {
+    text-align: center;
+  }
+  .home .home__text h1, .home .home__text p {
+    max-width: 100%;
+  }
+  .home img {
+    right: 0;
+    max-width: 700px;
+  }
+}
+/*=== /section-home ===*/
+/*=== section-tips ===*/
+.tips .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tip + .tip {
+  margin-top: 66px;
+}
+.tip h2 {
+  font-size: 38px;
+  margin-bottom: 13px;
+}
+.tip p {
+  font-size: 20px;
+}
+
+/*=== /section-tips ===*/
+/*=== section-slider ===*/
+.slider .container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.slide-wrapper {
+  min-width: calc(100% / 3);
+}
+
+.slide {
+  margin: 0px auto;
+  min-height: 300px;
+  max-width: 351px;
+}
+.slide img {
+  height: 194px;
+  margin-bottom: 15px;
+  background-color: #C4C4C4;
+  border-radius: 14px;
+}
+.slide p {
+  margin-bottom: 18px;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: -0.01em;
+}
+.slide a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #0077FF;
+}
+
+@media screen and (max-width: 1150px) {
+  .slide-wrapper {
+    min-width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 780px) {
+  .slide-wrapper {
+    min-width: calc(100%);
+  }
+}
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+  padding: 20px 0px;
+}
+.slider-buttons span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: black;
+  cursor: pointer;
+}
+.slider-buttons span::before, .slider-buttons span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: white;
+  transform-origin: 0 50%;
+}
+.slider-buttons span::before {
+  transform: rotate(45deg) translateY(-50%);
+}
+.slider-buttons span::after {
+  transform: rotate(-45deg) translateY(50%);
+}
+.slider-buttons span ~ span {
+  transform: rotate(180deg);
+}
+.slider-buttons span.js-button_disabled {
+  background-color: #E0E0E0;
+  pointer-events: none;
+}
+.slider-buttons span.js-button_disabled::before, .slider-buttons span.js-button_disabled::after {
+  background-color: #737A85;
+}
+
+.slides-buttons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+.slides-buttons li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #AFAFAF;
+  cursor: pointer;
+}
+.slides-buttons li + li {
+  margin-left: 5px;
+}
+.slides-buttons li.js-button_active {
+  background-color: black;
+}
+
+/*=== /section-slider ===*/
+/*=== section-banner ===*/
+.banner .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: black;
+}
+
+/*=== /section-banner ===*//*# sourceMappingURL=home.css.map */

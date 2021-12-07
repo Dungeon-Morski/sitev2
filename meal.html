@@ -1,210 +1,343 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+    <head>
 
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/media.css">
-    <title>практика</title>
-</head>
-<body>
-    <div class="container">
-       <div class="header__wrapper">
-        <!-- header -->
-			<header class="header">
-				<div class="container">
-					<div class="header__left"> 
+        <!-- meta -->
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-						<!-- logotype -->
-						<a href="index.html" class="logotype">
-							<img src="images/logo.svg" alt="logotype" />
-							<span>ZOJE</span>
-						</a>
-						<!-- /logotype -->
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no,
+                initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <!-- /meta -->
 
-						<!-- navigation -->
-						<nav class="header__nav">
-							<ul class="menu">
-								<li><a href="#!">Советы</a></li>
-								<li><a href="meal.html">Питание</a></li>
-								<li><a href="beauty.html">Красота</a></li>
-								<li><a href="#!">Спорт</a></li>
-							</ul>
-						</nav>
-						<!-- /navigation -->
+        <title>MEAL</title>
 
-					</div>
-					<div class="header__right">
+        <!-- links -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/meal.css">
+        <!-- /links -->
 
-						<!-- personal__account -->
-						<div class="personal__account">
-                            <!--класс кнопки .premium__btn-->
-							<a href="#!">Личный кабинет</a>
-						</div>
-						<!-- /personal__account -->
-
-						<!-- menu__button -->
-						<div class="menu__button display_none">
-							<span></span>
-						</div>
-						<!-- /menu__button -->
-
-					</div>
-				</div>
-			</header>
+    </head>
+    <body>
         
-   
-       <div class="container">
-           <div class="beauty__block meal__block">
-               <div class="position_info">
-                   <span><a href="index.html">Главная</a></span>
-                   <span>></span>
-                   <span><a href="">Питание</a></span>
-               </div>
-              
-              
+        <!-- header -->
+        <header class="header">
+            <div class="container">
 
-               <div class="beauty__content">
-                <div class="beauty__img">
-                    <img src="images/image 12.png" alt="">
+                <!-- logotype -->
+                <a href="index.html" class="header__logotype">
+                    <img src="images/logo.svg" alt="logotype" height="43px" />
+                    <span>ZOJE</span>
+                </a>
+                <!-- /logotype -->
+
+                <!-- header__menu -->
+                <div class="header__menu">
+
+                    <!-- navigation -->
+                    <nav class="header__navigation">
+                        <ul class="menu-list">
+                            <li><a href="#!">Советы</a></li>
+                            <li><a href="meal.html">Питание</a></li>
+                            <li><a href="beauty.html">Красота</a></li>
+                            <li><a href="sport.html">Спорт</a></li>
+                        </ul>
+                    </nav>
+                    <!-- /navigation -->
+
+                    <!-- premium-button -->
+                    <div class="premium-button">
+                        <a href="cabinet.html">Premium</a>
+                    </div>
+                    <!-- /premium-button -->
+
+                    <!-- account-button -->
+                    <div class="account-button">
+                        <a href="#!">Личный кабинет</a>
+                    </div>
+                    <!-- /account-button -->
+
                 </div>
-                <div class="beauty__text">
-                    <div class="beauty__title">
-                        <p>ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ</p>
-                        
-                        
-                    </div>
-                    <div class="beauty__title__subscription">
-                        <p>Здоровый образ жизни — лучший помощник в сохранении 
-                            молодости, красоты и неиссякаемой энергии. Правда, 
-                            некоторые утверждают, что здоровый образ жизни — это 
-                            ерунда. Ларчик открывается просто: это говорят те, кто не 
-                            способен ему следовать, поэтому постоянно срываются. По 
-                            этому поводу есть известная поговорка: «Зелен виноград!». 
-                            Те, кто не могут до него дотянуться, успокаивают себя тем, 
-                            что он, мол, зелен и невкусен.</p>
-                    </div>
-                    <div class="beauty__subscription__btn">
-                        <a href="#">Читать </img></a>
-                    </div>
+                <!-- /header__menu -->
+
+                <!-- menu-button -->
+                <div class="menu-button js-hidden">
+                    <span></span>
+                </div>
+                <!-- /menu-button -->
+
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!-- modal_block -->
+        <div class="modal-wrapper js-hidden">
+            <div class="modal">
+
+                <div class="modal__exit-button">
+                    <span></span>
+                </div>
+
+                <div class="modal__position">
+                    <a href="#">Регистрация</a>
+                    <span>></span>
+                    <a href="#">Введите код подтверждение </a>
                 </div>
                 
-              </div>
-
-              <div class="beauty__content meal__content">
-
-                <div class="beauty__img meal__img">
-                    <div class="meal__f">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39" fill="none">
-                            <path d="M0 18.72C0 9.89528 0 5.48296 2.78732 2.74148C5.57465 0 10.0607 0 19.033 0H20.6191C29.5914 0 34.0775 0 36.8649 2.74148C39.6522 5.48296 39.6522 9.89528 39.6522 18.72V20.28C39.6522 29.1047 39.6522 33.517 36.8649 36.2585C34.0775 39 29.5914 39 20.6191 39H19.033C10.0607 39 5.57465 39 2.78732 36.2585C0 33.517 0 29.1047 0 20.28V18.72Z" fill="#0077FF"/>
-                            <path d="M21.0983 28.0961C12.0609 28.0961 6.90619 22.0023 6.69141 11.8623H11.2184C11.3671 19.3048 14.7044 22.4573 17.3478 23.1073V11.8623H21.6106V18.2811C24.2211 18.0048 26.9633 15.0798 27.8885 11.8623H32.1512C31.4408 15.8273 28.4669 18.7523 26.3521 19.9548C28.4669 20.9298 31.854 23.4811 33.1427 28.0961H28.4504C27.4425 25.0086 24.9315 22.6198 21.6106 22.2948V28.0961H21.0983Z" fill="white"/>
-                            </svg>
-                            <span>ВКОНТАКТЕ</span>
+                <form action="" class="modal__form">
+                    <div class="input-group">
+                        <label for="">Логин *</label>
+                        <input type="text" name="" id="" required='required' placeholder="Иван" >
                     </div>
-                       <div class="meal__s">
-                           <p>ПОДПИСЫВАЙСЯ НА НАШ ПАБЛИК. УЗНАВАЙТЕ 
-                            ВСЕ БОЛЬШЕ ПРО ЗДОРОВЫЙ ОБРАЗ ЖИЗНИ.</p>
-                       </div>
-                       <div class="beauty__subscription__btn">
-                        <a href="#">Подробнее</img></a>
+                    <div class="input-group">
+                        <label for="">Email *</label>
+                        <input type="email" name="" id="" placeholder="@myemail" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="">Пароль *</label>
+                        <input type="password" name="" id="" placeholder="qwerty123" required='required'>
+                    </div>
+                </form>
+
+                <div class="confirm">
+                    <input type="checkbox" name="" id="confirm" required='required'>
+                    <div class="label-block">
+                        <label for="confirm">
+                            Я соглашаюсь всеми правилами сайта и использование его.
+                        </label>
+                        <p>Нажмите на квадрат, если вы согласны.</p>
                     </div>
                 </div>
-                
-                <div class="beauty__text">
-                    
-                    <div class="beauty__title__subscription meal__sub">
-                        <p>Рецепты народной медицины, а так же любые другие 
+
+                <input type="submit" class="submit-button">
+
+                <div class="auntification">
+                    <a href="#">Я уже зарегистрирован </a>
+                </div>
+            </div>
+        </div>
+        <!-- /modal_block -->
+
+        <!-- main -->
+        <main class="main">
+
+            <div class="info-position">
+                <div class="container">
+                        <span><a href="index.html">Главная</a></span>
+                        <span>></span>
+                        <span><a href="">Питание</a></span>
+                </div>
+            </div>
+
+
+            <section class="meal-health">
+                <div class="container">
+
+                    <div class="health__img">
+                        <img src="images/meal/image 12.png" alt="" />
+                    </div>
+
+                    <div class="health__text">
+                        <h2>
+                            Здоровый образ жизни
+                        </h2>
+                        <p>
+                            Здоровый образ жизни — лучший помощник в сохранении
+                            молодости, красоты и неиссякаемой энергии. Правда,
+                            некоторые утверждают, что здоровый образ жизни — это
+                            ерунда. Ларчик открывается просто: это говорят те, кто не
+                            способен ему следовать, поэтому постоянно срываются. По
+                            этому поводу есть известная поговорка: «Зелен виноград!».
+                            Те, кто не могут до него дотянуться, успокаивают себя тем,
+                            что он, мол, зелен и невкусен.
+                        </p>
+                        <a href="#">
+                            Читать
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="vk-group">
+                <div class="container">
+
+                    <div class="vk-wrapper">
+                        <div class="vk-group-left-side">
+                            <div class="vk-icon-title">
+                                <img src="images/meal/VK.png" alt="">
+                                <span>
+                                    Вконтакте
+                                </span>
+                            </div>
+                            <p>
+                                Подписывайся на наш паблик. Узнавайте
+                                всё больше про здоровый образ жизни
+                            </p>
+                            <a href="#">Подробнее</a>
+                        </div>
+                            
+                        <p class="vk-group__text">
+                            Рецепты народной медицины, а так же любые другие 
                             советы медицинского характера, размещенные в 
                             группе, опубликованы только для ознакомления, их 
-                            запрещено применять без консультации с врачом.</p>
+                            запрещено применять без консультации с врачом.
+                        </p>
                     </div>
-                   
-                    
-                </div>
-                
-              </div>
 
-            
+                </div>
+            </section>
 
-           </div>
-           <div class="beauty__content">
-            <div class="beauty__text">
-                <div class="beauty__title">
-                    <p>ЗДОРОВОЕ ПИТАНИЕ</p>
-                    
-                    
+
+            <section class="meal-health">
+                <div class="container">
+
+                    <div class="health__text">
+                        <h2>
+                            Здоровое питание
+                        </h2>
+                        <p>
+                            Удовлетворение голода является одним из самых важных 
+                            инстинктов организма, необходимых для сохранения жизни. 
+                            Во-первых, все клетки и ткани нашего организма формируются 
+                            из той пищи, которую мы едим. Во-вторых, пища является 
+                            источником энергии, необходимой для функционирования 
+                            организма.
+                        </p>
+                        <a href="#">
+                            Читать
+                        </a>
+                    </div>
+
+                    <div class="health__img">
+                        <img src="images/meal/image 13.png" alt="" />
+                    </div>
+
                 </div>
-                <div class="beauty__title__subscription">
-                    <p>Удовлетворение голода является одним из самых важных 
-                        инстинктов организма, необходимых для сохранения жизни. 
-                        Во-первых, все клетки и ткани нашего организма формируются 
-                        из той пищи, которую мы едим. Во-вторых, пища является 
-                        источником энергии, необходимой для функционирования 
-                        организма..</p>
+            </section>
+
+
+            <section class="meal-tips-cards">
+                <div class="container">
+
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="images/meal/image 7.png" alt="" />
+                        </div>
+
+                        <div class="card__text">
+                            <h2>
+                                Ещьте чаще
+                            </h2>
+                            <p>
+                                Здоровый образ жизни — лучший помощник в сохранении
+                                молодости, красоты и неиссякаемой энергии. Правда,
+                                некоторые утверждают, что здоровый образ жизни — это
+                                ерунда. Ларчик открывается просто: это говорят те, кто не
+                                способен ему следовать, поэтому постоянно срываются. По
+                                этому поводу есть известная поговорка: «Зелен виноград!».
+                                Те, кто не могут до него дотянуться, успокаивают себя тем,
+                                что он, мол, зелен и невкусен.
+                        </p>
+                            <a href="#">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="images/meal/image 7.png" alt="" />
+                        </div>
+
+                        <div class="card__text">
+                            <h2>
+                                Ещьте чаще
+                            </h2>
+                            <p>
+                                Как ни парадоксально, чтобы не набирать вес,
+                                надо есть чаще. Плотно позавтракайте,
+                                нормально пообедайте и скромно поужинайте,
+                                в промежутках между ними – перекусите
+                                фруктами, а перед сном — кисломолочный
+                                напиток. Таким образом вы не будете
+                                испытывать чувство голода и сможете
+                                контролировать качество и количество
+                                принимаемой пищи.
+                        </p>
+                            <a href="#">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="images/meal/image 7.png" alt="" />
+                        </div>
+
+                        <div class="card__text">
+                            <h2>
+                                Ещьте чаще
+                            </h2>
+                            <p>
+                                Удовлетворение голода является одним из самых важных 
+                                инстинктов организма, необходимых для сохранения жизни. 
+                                Во-первых, все клетки и ткани нашего организма формируются 
+                                из той пищи, которую мы едим. Во-вторых, пища является 
+                                источником энергии, необходимой для функционирования 
+                                организма.
+                        </p>
+                            <a href="#">
+                                Читать
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="beauty__subscription__btn">
-                    <a href="#">Читать </img></a>
+            </section>
+
+        </main>
+        <!-- /main -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer__left">
+
+                    <!-- logotype -->
+                    <a href="index.html"" class="footer__logotype">
+                        <img src="images/logo.svg" alt="logotype" />
+                        <span>ZOJE</span>
+                    </a>
+                    <!-- /logotype -->
+
+                    <p>
+                        Стиль жизни, направленный на омоложение и оздоровление
+                        всего организма, отказ от вредных привычек.
+                    </p>
                 </div>
+
+                <div class="footer__right">
+                    <a href="#!"><img src="images/footer/Twitter-Original.png" alt="" /></a>
+                    <a href="#!"><img src="images/footer/YouTube-Original.png" alt="" /></a>
+                    <a href="#!"><img src="images/footer/VK-Original.png" alt="" /></a>
+                    <a href="#!"><img src="images/footer/Instagram-Original.png" alt="" /></a>
+                </div>
+
             </div>
-            <div class="beauty__img">
-                <img src="images/image 13.png" alt="">
-            </div>
-          </div>
-          <div class="card__block">
-			<div class="card__item">
-				<img src="images/image 7.png" alt="">
-				<div class="item__title">ЕЩЬТЕ ЧАЩЕ</div>
-				<div class="item__description">Как ни парадоксально, чтобы не набирать вес, 
-надо есть чаще. Плотно позавтракайте, 
-нормально пообедайте и скромно поужинайте, 
-в промежутках между ними – перекусите 
-фруктами, а перед сном — кисломолочный 
-напиток. Таким образом вы не будете 
-испытывать чувство голода и сможете 
-контролировать качество и количество 
-принимаемой пищи.</div>
-					<div class="beauty__subscription__btn">
-						<a href="#">Читать </img></a>
-					</div>
-			</div>
-			<div class="card__item">
-				<img src="images/image 7.png" alt="">
-				<div class="item__title">ЕЩЬТЕ ЧАЩЕ</div>
-				<div class="item__description">Как ни парадоксально, чтобы не набирать вес, 
-надо есть чаще. Плотно позавтракайте, 
-нормально пообедайте и скромно поужинайте, 
-в промежутках между ними – перекусите 
-фруктами, а перед сном — кисломолочный 
-напиток. Таким образом вы не будете 
-испытывать чувство голода и сможете 
-контролировать качество и количество 
-принимаемой пищи.</div>
-					<div class="beauty__subscription__btn">
-						<a href="#">Читать </img></a>
-					</div>
-			</div>
-			<div class="card__item">
-				<img src="images/image 7.png" alt="">
-				<div class="item__title">ЕЩЬТЕ ЧАЩЕ</div>
-				<div class="item__description">Как ни парадоксально, чтобы не набирать вес, 
-надо есть чаще. Плотно позавтракайте, 
-нормально пообедайте и скромно поужинайте, 
-в промежутках между ними – перекусите 
-фруктами, а перед сном — кисломолочный 
-напиток. Таким образом вы не будете 
-испытывать чувство голода и сможете 
-контролировать качество и количество 
-принимаемой пищи. </div>
-					<div class="beauty__subscription__btn">
-						<a href="#">Читать </img></a>
-					</div>
-			</div>
-		</div>
-       </div>
-    
- 
-<script src="js/script.js"></script>
-</body>
+        </footer>
+        <!-- /footer -->
 
+        <!-- scripts -->
+        <noscript>Your browser don't allow scripts></noscript>
+        <script src="js/script.js"></script>
+        <!-- /scripts -->
+
+    </body>
 </html>

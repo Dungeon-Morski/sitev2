@@ -1,0 +1,121 @@
+/*=== section-health ===*/
+.health .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.health .health__text {
+  padding: 15px 0px;
+  max-width: 700px;
+}
+.health .health__text h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.health .health__text p {
+  margin-top: 20px;
+  line-height: 32px;
+  color: #6b7281;
+}
+.health .health__text a {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.health .health__text a::after {
+  content: url("../images/arrow.svg");
+  position: absolute;
+  margin-left: 50%;
+  transform: translateY(2px);
+  opacity: 0;
+}
+.health .health__text a:hover {
+  border-color: white;
+  border-left: 1px solid black;
+}
+.health .health__text a:hover::after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 860px) {
+  .health__img + .health__img {
+    order: 4;
+  }
+
+  .health .container {
+    grid-template-columns: repeat(1, minmax(1fr));
+  }
+}
+/*=== /section-health ===*/
+/*=== section-beauty-tips ===*/
+.beauty-tips-cards .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(320px, 1fr));
+  align-content: center;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.beauty-tips-cards .card__text {
+  padding: 15px 0px;
+  max-width: 700px;
+}
+.beauty-tips-cards .card__text h2 {
+  margin-top: 10px;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.beauty-tips-cards .card__text p {
+  margin-top: 20px;
+  height: 125px;
+  color: #6b7281;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  display: -webkit-box;
+}
+.beauty-tips-cards .card__text a {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.beauty-tips-cards .card__text a::after {
+  content: url("../images/arrow.svg");
+  position: absolute;
+  margin-left: 50%;
+  transform: translateY(2px);
+  opacity: 0;
+}
+.beauty-tips-cards .card__text a:hover {
+  border-color: white;
+  border-left: 1px solid black;
+}
+.beauty-tips-cards .card__text a:hover::after {
+  opacity: 1;
+}
+
+/*=== /section-beauty-tips ===*/
+@media screen and (max-width: 650px) {
+  .health__img + .health__img {
+    order: 4;
+  }
+
+  .beauty-tips-cards .container,
+.health .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=beauty.css.map */
